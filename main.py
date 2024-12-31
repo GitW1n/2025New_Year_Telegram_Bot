@@ -2,6 +2,8 @@ from telegram import Update
 from telegram.ext import Updater, CommandHandler, CallbackContext
 import random
 
+TOKEN = None
+
 class NewYearBot:
     def __init__(self, token: str):
         self.token = token
@@ -30,7 +32,7 @@ class NewYearBot:
         self.updater.idle()
 
 def main():
-    bot = NewYearBot(token='YOUR_BOT_TOKEN')
+    bot = NewYearBot(token=TOKEN)
     bot.run()
 
 if __name__ == '__main__':
